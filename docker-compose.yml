@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+    db-ms-usuarios:
+        container_name: dan-ms-usuarios
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_USER: usuarios_microservicio
+            POSTGRES_PASSWORD: 4Twx3W57Bcu2YqUF
+            POSTGRES_DB: usuarios_db
+        ports:
+            - '5432:5432'
+
+        db-ms-pedidos:
+        container_name: dan-ms-pedidos
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_USER: pedidos_microservicio
+            POSTGRES_PASSWORD: hj9KPPUQgBf5Hjq8
+            POSTGRES_DB: pedidos_db
+        ports:
+            - '5432:5433'
